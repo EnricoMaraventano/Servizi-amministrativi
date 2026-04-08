@@ -1,0 +1,1252 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enrico Maraventano, Ph.D. | Assistenza amministrativa professionale</title>
+  <meta name="description" content="Servizi di assistenza amministrativa professionale da remoto per imprese, studi, associazioni e organizzazioni. Excel, Word, gestionali, pratiche digitali, supporto operativo e documentale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --white:#ffffff;
+      --navy:#0b1628;
+      --navy-2:#12233d;
+      --navy-3:#10294d;
+      --text:#142033;
+      --muted:#5f6f86;
+      --line:#dce3ee;
+      --soft:#eef3f9;
+      --accent:#1e5eff;
+      --accent-soft:rgba(30,94,255,.10);
+      --shadow:0 20px 60px rgba(10,22,40,.10);
+      --gold:#c5a35a;
+      --gold-soft:#ecdcb6;
+      --max:1240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(var(--max),calc(100% - 48px));margin:0 auto}
+
+    .hero-wrap{position:relative;overflow:hidden;background:linear-gradient(135deg,#091321 0%,#112340 58%,#10294d 100%);color:#fff}
+    .hero-wrap::before,.hero-wrap::after{content:"";position:absolute;border-radius:999px;pointer-events:none;filter:blur(8px)}
+    .hero-wrap::before{width:460px;height:460px;right:-140px;top:-120px;background:radial-gradient(circle,rgba(96,165,250,.20) 0%,rgba(96,165,250,0) 68%)}
+    .hero-wrap::after{width:360px;height:360px;left:-110px;bottom:-80px;background:radial-gradient(circle,rgba(197,163,90,.16) 0%,rgba(197,163,90,0) 70%)}
+
+    .topbar{position:relative;z-index:2;padding:28px 0 18px}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.12)}
+    .brand{display:flex;align-items:center;gap:14px;color:#fff}
+    .brand-mark{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;position:relative;background:linear-gradient(145deg,rgba(241,225,191,.96),rgba(197,163,90,.78));box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 12px 28px rgba(197,163,90,.22)}
+    .brand-mark::before{content:"";position:absolute;inset:4px;border-radius:12px;border:1px solid rgba(42,31,18,.16);pointer-events:none}
+    .brand-mark::after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;border:1.5px solid rgba(42,31,18,.70);box-shadow:0 0 0 5px rgba(42,31,18,.05)}
+    .brand-mark span{position:absolute;width:22px;height:22px;border-top:1.5px solid rgba(42,31,18,.55);border-left:1.5px solid rgba(42,31,18,.55);transform:rotate(45deg);opacity:.78}
+    .brand-kicker{margin:0 0 6px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.68);font-weight:700}
+    .brand-name{margin:0;font-size:24px;font-weight:700;letter-spacing:-.02em}
+    .nav-wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .nav{display:flex;gap:28px;flex-wrap:wrap;font-size:14px;color:rgba(255,255,255,.78);font-weight:500}
+    .nav a:hover{color:#fff}
+    .nav .cta{padding:10px 14px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1d2330;font-weight:700}
+    .lang-switch{display:flex;gap:8px;align-items:center}
+    .lang-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:.2s ease}
+    .flag{width:18px;height:12px;border-radius:3px;display:inline-block;box-shadow:0 0 0 1px rgba(0,0,0,.12);flex:0 0 18px}
+    .flag-it{background:linear-gradient(90deg,#009246 0 33.333%, #ffffff 33.333% 66.666%, #ce2b37 66.666% 100%)}
+    .flag-uk{background:#012169;position:relative;overflow:hidden}
+    .flag-uk::before,.flag-uk::after{content:"";position:absolute;inset:0}
+    .flag-uk::before{background:linear-gradient(26deg,transparent 43%,#fff 43% 49%,transparent 49% 51%,#fff 51% 57%,transparent 57%),linear-gradient(-26deg,transparent 43%,#fff 43% 49%,transparent 49% 51%,#fff 51% 57%,transparent 57%),linear-gradient(90deg,transparent 39%,#fff 39% 61%,transparent 61%),linear-gradient(180deg,transparent 34%,#fff 34% 66%,transparent 66%)}
+    .flag-uk::after{background:linear-gradient(26deg,transparent 46%,#c8102e 46% 48%,transparent 48% 52%,#c8102e 52% 54%,transparent 54%),linear-gradient(-26deg,transparent 46%,#c8102e 46% 48%,transparent 48% 52%,#c8102e 52% 54%,transparent 54%),linear-gradient(90deg,transparent 44%,#c8102e 44% 56%,transparent 56%),linear-gradient(180deg,transparent 40%,#c8102e 40% 60%,transparent 60%)}
+    .lang-btn:hover{background:rgba(255,255,255,.10)}
+    .lang-btn.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1d2330;border-color:transparent}
+
+    .hero{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:52px;align-items:start;padding:44px 0 94px}
+    .eyebrow{display:inline-flex;align-items:center;padding:11px 16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:.18em;font-weight:700;color:rgba(255,255,255,.86);backdrop-filter:blur(6px)}
+    .hero h1{margin:22px 0 0;font-family:'Cormorant Garamond',serif;font-size:clamp(46px,6vw,78px);line-height:.95;letter-spacing:-.03em;max-width:760px}
+    .hero p{margin:24px 0 0;max-width:760px;font-size:18px;line-height:1.9;color:rgba(255,255,255,.78)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:16px;font-size:14px;font-weight:700;transition:.22s ease;border:1px solid transparent}
+    .btn-primary{background:#fff;color:#0b1628;box-shadow:0 16px 30px rgba(0,0,0,.14)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-secondary{border-color:rgba(255,255,255,.16);color:#fff;background:rgba(255,255,255,.04)}
+    .btn-secondary:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+
+    .hero-points{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+    .hero-point{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.88);font-size:14px;line-height:1.75}
+
+    .hero-panel{position:relative;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:32px;padding:20px;box-shadow:0 24px 70px rgba(0,0,0,.18);backdrop-filter:blur(8px)}
+    .hero-panel-top{border-radius:24px;padding:20px;background:rgba(8,18,34,.46);border:1px solid rgba(255,255,255,.08)}
+    .concept-triptych{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+    .concept-panel{height:220px;border-radius:20px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.10);box-shadow:0 16px 40px rgba(0,0,0,.20);background:linear-gradient(180deg,#0b1c46 0%,#081535 100%)}
+    .concept-panel::before,.concept-panel::after{content:"";position:absolute;pointer-events:none}
+    .concept-label{display:none}
+    .concept-a::before{width:160px;height:160px;right:-24px;top:46px;border-radius:50%;background:radial-gradient(circle,rgba(66,114,255,.65),rgba(66,114,255,.12) 60%,transparent 72%)}
+    .concept-a::after{left:18px;top:32px;width:130px;height:2px;background:linear-gradient(90deg,transparent,rgba(233,215,172,.95));box-shadow:56px 56px 0 0 rgba(233,215,172,.92),108px 16px 0 0 rgba(233,215,172,.92)}
+    .concept-a .shape1,.concept-a .shape2,.concept-a .shape3{position:absolute;border-radius:28px;background:rgba(91,137,255,.18);border:1px solid rgba(255,255,255,.06)}
+    .concept-a .shape1{left:-10px;bottom:-24px;width:124px;height:108px}
+    .concept-a .shape2{left:58px;bottom:30px;width:120px;height:96px}
+    .concept-a .shape3{right:16px;bottom:18px;width:86px;height:86px;background:linear-gradient(180deg,rgba(233,215,172,.52),rgba(233,215,172,.10))}
+    .concept-b .card{position:absolute;border-radius:18px;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 24px rgba(0,0,0,.16)}
+    .concept-b .card1{left:18px;top:28px;width:88px;height:96px;background:linear-gradient(180deg,#eef4ff,#dfe9ff)}
+    .concept-b .card2{left:72px;top:84px;width:96px;height:82px}
+    .concept-b .card3{right:18px;top:42px;width:88px;height:90px;background:linear-gradient(180deg,#1b51c8,#2a68ef)}
+    .concept-b .card4{right:28px;bottom:26px;width:110px;height:74px;background:linear-gradient(180deg,#f7fbff,#e3ecff)}
+    .concept-b .card5{left:28px;bottom:22px;width:120px;height:56px;background:linear-gradient(180deg,#10224e,#17366e)}
+    .concept-b .chart,.concept-b .chart2,.concept-b .chart3{position:absolute;left:12px;right:12px;border-radius:999px}
+    .concept-b .card3 .chart{bottom:16px;height:30px;background:linear-gradient(90deg,rgba(233,215,172,.78) 0 18%,transparent 18% 28%,rgba(255,255,255,.34) 28% 42%,transparent 42% 52%,rgba(255,255,255,.62) 52% 66%,transparent 66% 76%,rgba(233,215,172,.96) 76% 90%)}
+    .concept-b .card4 .chart2{top:14px;height:28px;background:radial-gradient(circle at 20% 50%,rgba(53,100,232,.9) 0 28%,transparent 30%),radial-gradient(circle at 54% 50%,rgba(233,215,172,.9) 0 24%,transparent 26%),linear-gradient(90deg,#d8e5ff,#d8e5ff)}
+    .concept-b .card4 .chart3{bottom:14px;height:8px;background:#c8d7f5;box-shadow:0 -14px 0 0 #d8e5ff, 0 -28px 0 0 #dfe8fb}
+    .concept-c::before{left:18px;top:48px;width:120px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,.18),rgba(233,215,172,.95));box-shadow:72px 0 0 0 rgba(233,215,172,.9)}
+    .concept-c::after{right:20px;top:24px;width:64px;height:64px;background:radial-gradient(circle,rgba(233,215,172,.85) 0 10%,transparent 12%),radial-gradient(circle at 24px 0,rgba(233,215,172,.85) 0 10%,transparent 12%),radial-gradient(circle at 48px 0,rgba(233,215,172,.45) 0 10%,transparent 12%),radial-gradient(circle at 0 24px,rgba(233,215,172,.85) 0 10%,transparent 12%),radial-gradient(circle at 24px 24px,rgba(233,215,172,.85) 0 10%,transparent 12%),radial-gradient(circle at 48px 24px,rgba(233,215,172,.45) 0 10%,transparent 12%)}
+    .folder{position:absolute;bottom:22px;width:82px;height:108px;border-radius:18px;background:linear-gradient(180deg,#f3f6fb,#dce6f4);border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 28px rgba(0,0,0,.14)}
+    .folder::before{content:"";position:absolute;left:0;top:-16px;width:42px;height:24px;border-radius:12px 12px 0 0;background:inherit;border:1px solid rgba(255,255,255,.12);border-bottom:none}
+    .folder.one{left:20px;background:linear-gradient(180deg,#d8e3f1,#bfcfe4)}
+    .folder.two{left:78px;background:linear-gradient(180deg,#f4f7fb,#e0e7f0)}
+    .folder.three{left:136px;background:linear-gradient(180deg,#e6d18a,#bfa04c)}
+    .folder.four{right:18px;background:linear-gradient(180deg,#e7edf5,#d7e1ee)}
+    .folder.two,.folder.three,.folder.four{height:92px}
+    .folder.four{width:92px}
+    .hero-panel-top small{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.58);font-weight:800;margin-bottom:10px}
+    .hero-panel-top h3{margin:0;font-size:30px;line-height:1.15;letter-spacing:-.03em;color:#fff}
+    .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .hero-badge{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);font-size:12px;font-weight:700;color:rgba(255,255,255,.86)}
+
+    .strip{margin-top:-40px;position:relative;z-index:3}
+    .strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .strip-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px 26px;box-shadow:var(--shadow)}
+    .strip-number{font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.16em}
+    .strip-title{margin:12px 0 0;font-size:19px;line-height:1.45;font-weight:700;color:var(--navy)}
+
+    section{padding:92px 0}
+    .section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:60px;align-items:start;margin-bottom:34px}
+    .kicker{margin:0;font-size:12px;font-weight:800;letter-spacing:.22em;color:#6e7b8f;text-transform:uppercase}
+    .section-head h2{margin:14px 0 0;font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,56px);line-height:.98;letter-spacing:-.03em;color:var(--navy)}
+    .section-head p{margin:10px 0 0;font-size:17px;line-height:1.95;color:var(--muted)}
+
+    .service-stack{display:grid;gap:14px}
+    details.service-card{background:#fff;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
+    details.service-card[open]{border-color:rgba(31,91,216,.16);box-shadow:0 20px 54px rgba(31,91,216,.10)}
+    details.service-card summary{list-style:none;cursor:pointer;padding:22px;display:grid;grid-template-columns:76px 1fr auto;align-items:center;gap:16px}
+    details.service-card summary::-webkit-details-marker{display:none}
+    .visual{width:76px;height:76px;border-radius:22px;position:relative;overflow:hidden;border:1px solid rgba(19,32,54,.06);background:linear-gradient(180deg,#fbfcff,#eef3fb)}
+    .service-copy h3{font-size:20px;margin:0 0 6px;color:var(--navy)}
+    .service-copy p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}
+    .plus{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:#f1f5fb;color:#4b5c78}
+    details[open] .plus{background:#e7efff;color:var(--accent)}
+    .service-body{padding:0 22px 22px 22px}
+    .service-body-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;border-top:1px solid var(--line);padding-top:18px}
+    .service-body ul{margin:0;padding-left:18px;color:var(--muted)}
+    .service-body li{margin-bottom:8px;line-height:1.8}
+
+    .pivot-bars,.word-lines,.db-grid,.formula-wave,.calendar-block,.kpi-board{position:absolute;inset:0}
+    .pivot-bars{padding:14px}
+    .pivot-bars .bar{height:10px;border-radius:999px;margin-bottom:9px;background:linear-gradient(90deg,#2057d4,#81a9ff);animation:grow 3s ease-in-out infinite}
+    .pivot-bars .bar:nth-child(1){width:78%}
+    .pivot-bars .bar:nth-child(2){width:54%;animation-delay:.2s}
+    .pivot-bars .bar:nth-child(3){width:88%;animation-delay:.35s}
+    .pivot-bars .bar:nth-child(4){width:42%;animation-delay:.5s}
+    .pivot-bars .pie{position:absolute;right:10px;bottom:10px;width:28px;height:28px;border-radius:50%;background:conic-gradient(var(--gold) 0 35%, #d8e5ff 35% 100%)}
+    .word-lines{padding:13px}
+    .word-lines .title{height:12px;width:68%;border-radius:999px;background:#2057d4;margin-bottom:12px}
+    .word-lines .line{height:8px;border-radius:999px;background:#d9e4ff;margin-bottom:9px;animation:fadeSlide 2.8s ease-in-out infinite}
+    .word-lines .line:nth-child(2){width:92%}
+    .word-lines .line:nth-child(3){width:84%;animation-delay:.2s}
+    .word-lines .line:nth-child(4){width:76%;animation-delay:.35s}
+    .word-lines .macro{position:absolute;right:10px;bottom:10px;padding:4px 7px;border-radius:999px;background:#12284d;color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em}
+    .db-grid{padding:10px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+    .db-grid span{border-radius:8px;background:#ecf2fb;min-height:14px;animation:pulse 2.6s ease-in-out infinite}
+    .db-grid span:nth-child(5n){background:#dce8ff}.db-grid span:nth-child(7n){background:#dff7f0}
+    .formula-wave{padding:14px;display:flex;flex-direction:column;justify-content:center;gap:8px}
+    .formula-wave .eq{height:10px;border-radius:999px;background:linear-gradient(90deg,#12284d,#2057d4,#86aefe);animation:slideEq 3s linear infinite}
+    .formula-wave .eq:nth-child(1){width:86%}.formula-wave .eq:nth-child(2){width:70%;animation-delay:.25s}.formula-wave .eq:nth-child(3){width:80%;animation-delay:.5s}
+    .calendar-block{padding:11px}
+    .calendar-top{height:14px;border-radius:999px;background:linear-gradient(90deg,#0f9d77,#51d1ad);margin-bottom:10px}
+    .calendar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+    .calendar-grid span{height:12px;border-radius:6px;background:#e7eef8}
+    .calendar-grid span:nth-child(3), .calendar-grid span:nth-child(8), .calendar-grid span:nth-child(13){background:#ffe4ae;animation:pulse 2.4s ease-in-out infinite}
+    .kpi-board{padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .kpi-board .box{border-radius:12px;background:#fff;border:1px solid #e7edf7;padding:8px}
+    .kpi-board .metric{height:8px;width:60%;border-radius:999px;background:#12284d;margin-bottom:8px}
+    .kpi-board .trend{height:8px;border-radius:999px;background:linear-gradient(90deg,#0f9d77,#71dfbf);animation:grow 2.6s ease-in-out infinite}
+    .kpi-board .box:nth-child(2) .trend{background:linear-gradient(90deg,#2057d4,#80a8ff);width:74%}
+    .kpi-board .box:nth-child(3) .trend{background:linear-gradient(90deg,#d18a00,#ffd36e);width:56%}
+    .kpi-board .box:nth-child(4) .trend{background:linear-gradient(90deg,#7c3aed,#c29cff);width:68%}
+
+    .method{background:linear-gradient(180deg,#0b1628 0%,#10203a 100%);color:#fff}
+    .method .section-head h2,.method .section-head p,.method .kicker{color:#fff}
+    .method .section-head p{color:rgba(255,255,255,.74)}
+    .carousel-shell{background:rgba(255,255,255,.04);border-radius:32px;padding:24px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(7,17,37,.18)}
+    .carousel{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(320px,38%);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+    .carousel::-webkit-scrollbar{height:10px}.carousel::-webkit-scrollbar-thumb{background:rgba(255,255,255,.18);border-radius:999px}
+    .slide{min-height:400px;border-radius:26px;position:relative;overflow:hidden;scroll-snap-align:start;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04)}
+    .slide img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .slide-overlay{position:absolute;inset:auto 0 0 0;padding:24px;background:linear-gradient(180deg, rgba(9,15,28,.08), rgba(9,15,28,.82) 58%, rgba(9,15,28,.95))}
+    .slide small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#d9e4ff;margin-bottom:6px}
+    .slide strong{display:block;font-size:26px;line-height:1.05;margin-bottom:8px}
+    .slide p{margin:0;color:rgba(255,255,255,.82);font-size:14px;line-height:1.8}
+
+    .remote-visual,.m365-visual-slide{position:absolute;inset:0}
+    .m365-visual-slide{background:linear-gradient(135deg,#07142e 0%, #16306a 40%, #2057d4 100%);display:grid;place-items:center}
+    .remote-visual{background:radial-gradient(circle at 75% 24%, rgba(197,163,90,.22), transparent 18%),linear-gradient(135deg,#141d32 0%, #0d1a3c 100%);padding:34px;display:flex;align-items:center;justify-content:center}
+    .devices{width:min(88%,460px);position:relative}
+    .screen{border-radius:22px;background:linear-gradient(180deg,#f9fbff,#dfe8f7);border:8px solid rgba(255,255,255,.16);box-shadow:0 20px 40px rgba(0,0,0,.18)}
+    .screen.main{height:210px;padding:18px}.screen.secondary{position:absolute;right:-10px;bottom:-30px;width:42%;height:150px;padding:14px;background:linear-gradient(180deg,#fff,#e7efff)}
+    .bar{height:14px;border-radius:999px;background:linear-gradient(90deg,#2057d4,#6ea3ff);margin-bottom:14px}
+    .row{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-bottom:12px}
+    .mini{height:54px;border-radius:16px;background:#fff;box-shadow: inset 0 0 0 1px rgba(32,87,212,.08)}
+    .tiny{height:12px;border-radius:999px;background:#d9e4ff;margin-top:10px}
+
+    .split-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .split-card{border-radius:34px;padding:34px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .split-card.soft{background:var(--soft)}
+    .split-card h3{margin:16px 0 0;font-size:30px;line-height:1.18;letter-spacing:-.03em;color:var(--navy)}
+    .split-card p{margin:16px 0 0;color:var(--muted);font-size:16px;line-height:1.95}
+    .bullet-list{display:grid;gap:12px;margin-top:18px}
+    .bullet{display:flex;gap:12px;align-items:flex-start;color:var(--muted)}
+    .bullet i{width:24px;height:24px;flex:0 0 24px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;background:#eef4ff;color:var(--accent);font-weight:800}
+
+    .audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .audience{background:#fff;border:1px solid rgba(21,32,51,.06);box-shadow:var(--shadow);padding:22px;border-radius:22px}
+    .audience strong{display:block;margin-bottom:8px;font-size:16px;color:var(--navy)}
+    .audience span{color:var(--muted);font-size:14px;line-height:1.8}
+
+    .cta-box{background:linear-gradient(135deg,#0b1628 0%,#12233d 100%);color:#fff;border-radius:40px;padding:46px;box-shadow:0 30px 80px rgba(9,19,33,.18)}
+    .cta-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:end}
+    .cta-box h2{margin:16px 0 0;font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,58px);line-height:.98;letter-spacing:-.03em}
+    .cta-box p{margin:16px 0 0;max-width:760px;color:rgba(255,255,255,.74);font-size:16px;line-height:1.95}
+    .contact-card{border-radius:28px;padding:28px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}
+    .contact-item + .contact-item{margin-top:18px}
+    .contact-block{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+    .contact-label{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.46);font-weight:800}
+    .contact-value{margin-top:7px;font-size:16px;font-weight:600;color:#fff;line-height:1.7}
+    .contact-card .btn{margin-top:24px;width:100%}
+
+    .profile-banner{margin-top:26px;background:linear-gradient(90deg,#06112a 0%,#081736 38%,#0b234b 68%,#0d315f 100%);border-radius:34px;overflow:hidden;position:relative;box-shadow:0 28px 80px rgba(7,17,37,.22);display:grid;grid-template-columns:1.08fr .92fr;align-items:center;min-height:360px}
+    .profile-banner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 40%,rgba(255,255,255,.10),transparent 24%),radial-gradient(circle at 20% 80%,rgba(30,94,255,.10),transparent 26%)}
+    .profile-banner-copy{position:relative;z-index:1;padding:42px 46px;color:#fff;display:flex;flex-direction:column;justify-content:center}
+    .profile-banner-copy small{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.62);font-weight:800;margin-bottom:14px}
+    .profile-banner-copy h3{margin:0 0 12px;line-height:1.02;letter-spacing:-.03em;font-family:'Cormorant Garamond',serif;color:#fff}
+    .banner-line-1{display:block;font-size:clamp(18px,2.1vw,30px);margin-bottom:8px;letter-spacing:.02em;opacity:.96}
+    .banner-line-2{display:block;font-size:clamp(30px,3.7vw,48px);margin-bottom:8px;line-height:1}
+    .banner-line-3{display:block;font-size:clamp(27px,3.1vw,42px);line-height:1.12}
+    .profile-banner-copy p{margin:6px 0 0;font-size:17px;line-height:1.75;color:rgba(255,255,255,.84);font-style:italic;max-width:560px}
+    .profile-banner-photo{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:center;height:100%;padding:0 4px 0 0}
+    .profile-banner-photo img{width:min(100%,430px);height:auto;object-fit:contain;border-radius:0;filter:drop-shadow(0 24px 60px rgba(0,0,0,.18)) saturate(1.02) contrast(1.02);-webkit-mask-image:radial-gradient(ellipse at center, rgba(0,0,0,1) 60%, rgba(0,0,0,.95) 72%, rgba(0,0,0,.55) 84%, transparent 100%);mask-image:radial-gradient(ellipse at center, rgba(0,0,0,1) 60%, rgba(0,0,0,.95) 72%, rgba(0,0,0,.55) 84%, transparent 100%)}
+
+    .faq-wrap{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:32px;padding:28px;box-shadow:var(--shadow)}
+    .faq-grid{display:grid;gap:14px}
+    .faq-item{background:var(--bg);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+    .faq-item summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;color:var(--navy)}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item .faq-toggle{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--navy);font-size:18px;transition:.2s ease;flex:0 0 32px}
+    .faq-item[open] .faq-toggle{transform:rotate(45deg);background:var(--accent-soft);color:var(--accent)}
+    .faq-answer{padding:0 20px 20px;color:var(--muted);font-size:15px;line-height:1.9}
+
+    footer{background:#091321;color:rgba(255,255,255,.72);border-top:1px solid rgba(255,255,255,.06)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:22px;flex-wrap:wrap;padding:30px 0}
+    .footer-brand strong{display:block;color:#fff;font-size:18px;margin-bottom:5px}
+    .footer-note{max-width:520px;line-height:1.8}
+
+    .legal-card{background:#fff;border:1px solid var(--line);border-radius:30px;padding:30px;box-shadow:var(--shadow)}
+    .legal-card h3{margin:0 0 10px;font-size:28px;line-height:1.08;color:var(--navy);font-family:'Cormorant Garamond',serif;letter-spacing:-.03em}
+    .legal-card p{margin:0 0 12px;color:var(--muted);font-size:15px;line-height:1.9}
+    .legal-list{margin:0;padding-left:18px;color:var(--muted)}
+    .legal-list li{margin-bottom:8px;line-height:1.85}
+    .footer-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+    .footer-links a{color:#fff;opacity:.82}
+    .footer-links a:hover{opacity:1}
+
+    .legal-page{position:fixed;inset:0;z-index:72;background:rgba(8,18,34,.72);backdrop-filter:blur(10px);display:none;overflow:auto;padding:28px}
+    .legal-page:target{display:block}
+    .legal-shell{width:min(980px,100%);margin:0 auto;background:var(--bg);border-radius:34px;box-shadow:0 34px 90px rgba(0,0,0,.26);overflow:hidden;border:1px solid rgba(255,255,255,.16)}
+    .legal-header{padding:28px 30px;background:linear-gradient(135deg,#091321 0%,#112340 58%,#10294d 100%);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .legal-header h2{margin:0;font-size:32px;line-height:1.02;font-family:'Cormorant Garamond',serif;letter-spacing:-.03em}
+    .legal-close{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);color:#fff;font-size:24px;line-height:1}
+    .legal-body{padding:26px;display:grid;gap:18px}
+    .rights-form{display:grid;gap:14px;margin-top:8px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .form-field{display:grid;gap:7px}
+    .form-field label{font-size:13px;font-weight:700;color:var(--navy)}
+    .form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid var(--line);border-radius:16px;padding:14px 15px;font:inherit;background:#fff;color:var(--text)}
+    .form-field textarea{min-height:140px;resize:vertical}
+    .rights-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+    .small-note{font-size:13px;color:var(--muted);line-height:1.75}
+
+    .cookie-banner{position:fixed;left:18px;right:18px;bottom:18px;z-index:60;background:rgba(9,19,33,.96);color:#fff;border:1px solid rgba(255,255,255,.10);border-radius:24px;padding:18px 20px;box-shadow:0 28px 70px rgba(0,0,0,.28);backdrop-filter:blur(10px)}
+    .cookie-banner[hidden],.cookie-panel[hidden]{display:none!important}
+    .cookie-banner-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
+    .cookie-banner h4{margin:0 0 6px;font-size:18px;color:#fff}
+    .cookie-banner p{margin:0;color:rgba(255,255,255,.76);font-size:14px;line-height:1.7}
+    .cookie-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .cookie-btn{min-height:44px;padding:0 16px;border-radius:14px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font-weight:700;cursor:pointer}
+    .cookie-btn.primary{background:#fff;color:#0b1628;border-color:transparent}
+    .cookie-btn.ghost{background:transparent}
+    .cookie-link{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+    .cookie-panel{position:fixed;right:18px;bottom:120px;z-index:61;width:min(460px,calc(100% - 36px));background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 26px 70px rgba(0,0,0,.22);padding:22px}
+    .cookie-panel h4{margin:0 0 8px;font-size:22px;color:var(--navy)}
+    .cookie-panel p{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.8}
+    .cookie-option{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--line)}
+    .cookie-option strong{display:block;font-size:15px;color:var(--navy);margin-bottom:4px}
+    .cookie-option span{display:block;color:var(--muted);font-size:13px;line-height:1.7}
+    .switch{position:relative;display:inline-flex;align-items:center;cursor:pointer}
+    .switch input{position:absolute;opacity:0;pointer-events:none}
+    .switch-slider{width:48px;height:28px;background:#d9e4f3;border-radius:999px;position:relative;transition:.2s ease}
+    .switch-slider::after{content:"";position:absolute;top:4px;left:4px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.18);transition:.2s ease}
+    .switch input:checked + .switch-slider{background:#1e5eff}
+    .switch input:checked + .switch-slider::after{transform:translateX(20px)}
+    .switch input:disabled + .switch-slider{background:#c7d2e3}
+    .cookie-panel-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+
+    @keyframes grow{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.86);transform-origin:left center}}
+    @keyframes fadeSlide{0%,100%{opacity:.9;transform:translateX(0)}50%{opacity:.6;transform:translateX(6px)}}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+    @keyframes slideEq{0%{transform:translateX(0)}50%{transform:translateX(4px)}100%{transform:translateX(0)}}
+
+    @media (max-width:1120px){.hero,.section-head,.cta-grid,.split-grid,.profile-banner{grid-template-columns:1fr}.hero{padding-bottom:82px}.audience-grid{grid-template-columns:1fr 1fr}.carousel{grid-auto-columns:minmax(290px,62%)}.profile-banner-photo{justify-content:flex-end;padding:0 26px 0 0}}
+    @media (max-width:860px){.strip-grid,.hero-points,.form-grid{grid-template-columns:1fr}.topbar-inner{align-items:flex-start;flex-direction:column}.nav-wrap{width:100%;justify-content:space-between}.nav{gap:16px}section{padding:76px 0}.cta-box,.split-card,.faq-wrap,.legal-card{padding:24px}.hero-panel{padding:14px}.service-body-grid{grid-template-columns:1fr}.profile-banner-copy{padding:28px}.profile-banner-photo{padding:0 12px 0 12px;justify-content:center}.profile-banner-photo img{width:min(100%,280px)}.cookie-banner-inner{grid-template-columns:1fr}.cookie-actions{justify-content:flex-start}.legal-page{padding:16px}.legal-body{padding:18px}}
+    @media (max-width:700px){.nav{display:none}.audience-grid{grid-template-columns:1fr}.carousel{grid-auto-columns:88%}.lang-switch{margin-left:auto}}
+    @media (max-width:560px){.container{width:min(var(--max),calc(100% - 28px))}.hero p,.section-head p,.split-card p,.cta-box p,.faq-answer{line-height:1.8}.btn{width:100%}.hero-actions{flex-direction:column}.strip{margin-top:-28px}details.service-card summary{grid-template-columns:68px 1fr}.plus{display:none}.concept-triptych{grid-template-columns:1fr}.concept-panel{height:170px}}
+  </style>
+</head>
+<body>
+  <header class="hero-wrap">
+    <div class="container topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#top">
+          <div class="brand-mark" aria-hidden="true"><span></span></div>
+          <div>
+            <p class="brand-kicker" data-i18n="brand_kicker">Assistenza amministrativa</p>
+            <h2 class="brand-name">Enrico Maraventano, Ph.D.</h2>
+          </div>
+        </a>
+        <div class="nav-wrap">
+          <nav class="nav" aria-label="Navigazione principale">
+            <a href="#servizi" data-i18n="nav_services">Servizi</a>
+            <a href="#profilo" data-i18n="nav_profile">Profilo</a>
+            <a href="#metodo" data-i18n="nav_method">Metodo</a>
+            <a href="#contatti" class="cta" data-i18n="nav_contacts">Contatti</a>
+          </nav>
+          <div class="lang-switch" aria-label="Language switcher">
+            <button class="lang-btn active" data-lang="it" type="button"><span class="flag flag-it" aria-hidden="true"></span> IT</button>
+            <button class="lang-btn" data-lang="en" type="button"><span class="flag flag-uk" aria-hidden="true"></span> EN</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero" id="top">
+        <div>
+          <div class="eyebrow" data-i18n="hero_eyebrow">Supporto operativo, documentale e organizzativo</div>
+          <h1 data-i18n="hero_title">Struttura, precisione e affidabilità per la tua amministrazione.</h1>
+          <p data-i18n="hero_intro">Offro assistenza amministrativa professionale per imprese, studi professionali, associazioni sportive e culturali, realtà locali e organizzazioni che necessitano di un supporto serio, riservato e qualificato, in presenza soltanto quando realmente necessario e per il resto quasi esclusivamente da remoto.</p>
+
+          <div class="hero-points">
+            <div class="hero-point" data-i18n="hero_point_1">Excel avanzato, Word, documenti strutturati, reportistica, archivi, modulistica e supporto operativo.</div>
+            <div class="hero-point" data-i18n="hero_point_2">Uso di software gestionali, servizi digitali per pratiche amministrative e organizzazione dei flussi documentali.</div>
+            <div class="hero-point" data-i18n="hero_point_3">Collaborazione con imprese, ASD, associazioni, studi e professionisti per attività residuali e di supporto.</div>
+            <div class="hero-point" data-i18n="hero_point_4">Approccio giuridico-economico, metodo rigoroso, attenzione alla legge, alla riservatezza e alla verifica finale.</div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contatti" data-i18n="hero_cta_1">Richiedi una consulenza</a>
+            <a class="btn btn-secondary" href="#servizi" data-i18n="hero_cta_2">Scopri i servizi</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Profilo professionale">
+          <div class="hero-panel-top">
+            <div class="concept-triptych" aria-hidden="true">
+              <div class="concept-panel concept-a"><div class="shape1"></div><div class="shape2"></div><div class="shape3"></div><div class="concept-label">Geometrie</div></div>
+              <div class="concept-panel concept-b"><div class="card card1"></div><div class="card card2"></div><div class="card card3"><div class="chart"></div></div><div class="card card4"><div class="chart2"></div><div class="chart3"></div></div><div class="card card5"></div><div class="concept-label">Dashboard</div></div>
+              <div class="concept-panel concept-c"><div class="folder one"></div><div class="folder two"></div><div class="folder three"></div><div class="folder four"></div><div class="concept-label">Archivi</div></div>
+            </div>
+            <small data-i18n="panel_small">Profilo sintetico</small>
+            <h3 data-i18n="panel_title">Un supporto professionale pensato per chi ha bisogno di ordine, metodo e affidabilità.</h3>
+            <div class="hero-badges">
+              <span class="hero-badge" data-i18n="panel_badge_1">Ph.D. / Law & Economics</span>
+              <span class="hero-badge" data-i18n="panel_badge_2">Supporto da remoto</span>
+              <span class="hero-badge" data-i18n="panel_badge_3">Metodo documentale</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <div class="strip">
+    <div class="container">
+      <div class="strip-grid">
+        <div class="strip-card"><div class="strip-number">01</div><div class="strip-title" data-i18n="strip_1">Supporto quasi interamente da remoto, rapido e scalabile</div></div>
+        <div class="strip-card"><div class="strip-number">02</div><div class="strip-title" data-i18n="strip_2">Precisione documentale, controllo finale e tracciabilità del lavoro</div></div>
+        <div class="strip-card"><div class="strip-number">03</div><div class="strip-title" data-i18n="strip_3">Collaborazione con imprese, studi, associazioni e organizzazioni</div></div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="servizi">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker" data-i18n="services_kicker">Servizi</p>
+            <h2 data-i18n="services_title">Servizi offerti</h2>
+          </div>
+          <div>
+            <p data-i18n="services_intro">La versione bilingue è più affidabile di una semplice traduzione automatica del browser: ti consente di controllare tono, terminologia e percezione professionale in entrambe le lingue.</p>
+          </div>
+        </div>
+
+        <div class="service-stack">
+          <details class="service-card" open>
+            <summary>
+              <div class="visual"><div class="pivot-bars"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="pie"></div></div></div>
+              <div class="service-copy">
+                <h3 data-i18n="s1_title">Supporto amministrativo e documentale</h3>
+                <p data-i18n="s1_sub">Predisposizione documenti, modulistica, gestione archivi, organizzazione pratiche, monitoraggio scadenze e supporto segretariale.</p>
+              </div>
+              <div class="plus">+</div>
+            </summary>
+            <div class="service-body">
+              <div class="service-body-grid">
+                <div>
+                  <ul>
+                    <li data-i18n="s1_li1">Predisposizione documenti e modulistica.</li>
+                    <li data-i18n="s1_li2">Gestione archivi e organizzazione delle pratiche.</li>
+                    <li data-i18n="s1_li3">Monitoraggio scadenze e supporto segretariale.</li>
+                    <li data-i18n="s1_li4">Tenuta più ordinata dei flussi amministrativi.</li>
+                  </ul>
+                </div>
+                <div class="service-copy"><p data-i18n="s1_desc">È il blocco più trasversale: serve a dare ordine al lavoro quotidiano, ridurre dispersioni e rendere i materiali più chiari, reperibili e gestibili nel tempo.</p></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary>
+              <div class="visual"><div class="word-lines"><div class="title"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="macro">MACRO</div></div></div>
+              <div class="service-copy">
+                <h3 data-i18n="s2_title">Excel, Word e automazione operativa</h3>
+                <p data-i18n="s2_sub">Creazione e gestione di file strutturati, formule, tabelle, report, database leggeri e modelli ricorrenti.</p>
+              </div>
+              <div class="plus">+</div>
+            </summary>
+            <div class="service-body">
+              <div class="service-body-grid">
+                <div>
+                  <ul>
+                    <li data-i18n="s2_li1">File Excel organizzati e orientati alla produttività.</li>
+                    <li data-i18n="s2_li2">Documenti Word professionali e standardizzati.</li>
+                    <li data-i18n="s2_li3">Formule, tabelle e modelli ricorrenti.</li>
+                    <li data-i18n="s2_li4">Automazioni per attività ripetitive.</li>
+                  </ul>
+                </div>
+                <div class="service-copy"><p data-i18n="s2_desc">Questa parte è pensata per chi ha già molti file ma non strumenti davvero efficienti: l’obiettivo è far lavorare meglio documenti e fogli.</p></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary>
+              <div class="visual"><div class="db-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+              <div class="service-copy">
+                <h3 data-i18n="s3_title">Gestionali e piattaforme digitali</h3>
+                <p data-i18n="s3_sub">Utilizzo professionale di software gestionali e piattaforme per adempimenti, pratiche e supporto ai processi interni.</p>
+              </div>
+              <div class="plus">+</div>
+            </summary>
+            <div class="service-body">
+              <div class="service-body-grid">
+                <div>
+                  <ul>
+                    <li data-i18n="s3_li1">Uso di software gestionali in chiave operativa.</li>
+                    <li data-i18n="s3_li2">Supporto alle pratiche e agli adempimenti digitali.</li>
+                    <li data-i18n="s3_li3">Coordinamento dei processi organizzativi interni.</li>
+                    <li data-i18n="s3_li4">Maggior continuità tra strumenti e attività quotidiane.</li>
+                  </ul>
+                </div>
+                <div class="service-copy"><p data-i18n="s3_desc">Qui il valore non sta soltanto nel saper “entrare in piattaforma”, ma nel rendere più lineare il lavoro attorno a procedure, pratiche e flussi amministrativi digitali.</p></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary>
+              <div class="visual"><div class="formula-wave"><div class="eq"></div><div class="eq"></div><div class="eq"></div></div></div>
+              <div class="service-copy">
+                <h3 data-i18n="s4_title">Supporto a studi professionali</h3>
+                <p data-i18n="s4_sub">Collaborazione esterna per attività preparatorie, residuali e di supporto in ambito amministrativo, contabile e organizzativo.</p>
+              </div>
+              <div class="plus">+</div>
+            </summary>
+            <div class="service-body">
+              <div class="service-body-grid">
+                <div>
+                  <ul>
+                    <li data-i18n="s4_li1">Affiancamento su attività non riservate.</li>
+                    <li data-i18n="s4_li2">Supporto organizzativo e documentale continuo.</li>
+                    <li data-i18n="s4_li3">Rispetto del segreto professionale e dei limiti di legge.</li>
+                    <li data-i18n="s4_li4">Presidio dei lavori preparatori o residuali.</li>
+                  </ul>
+                </div>
+                <div class="service-copy"><p data-i18n="s4_desc">La logica è alleggerire i professionisti sulle attività di supporto, mantenendo rigore, riservatezza e piena attenzione alle attività che restano riservate per legge agli abilitati negli specifici albi di appartenenza.</p></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary>
+              <div class="visual"><div class="calendar-block"><div class="calendar-top"></div><div class="calendar-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div></div>
+              <div class="service-copy">
+                <h3 data-i18n="s5_title">Assistenza per associazioni, ASD e realtà locali</h3>
+                <p data-i18n="s5_sub">Supporto concreto per segreteria, organizzazione interna, documentazione, gestione dati, prospetti e comunicazioni.</p>
+              </div>
+              <div class="plus">+</div>
+            </summary>
+            <div class="service-body">
+              <div class="service-body-grid">
+                <div>
+                  <ul>
+                    <li data-i18n="s5_li1">Segreteria e gestione ordinata della documentazione.</li>
+                    <li data-i18n="s5_li2">Organizzazione dati, prospetti e comunicazioni.</li>
+                    <li data-i18n="s5_li3">Supporto per esigenze continuative o temporanee.</li>
+                    <li data-i18n="s5_li4">Aiuto concreto per realtà con struttura amministrativa leggera.</li>
+                  </ul>
+                </div>
+                <div class="service-copy"><p data-i18n="s5_desc">È un supporto molto utile per realtà che non hanno un ufficio amministrativo interno forte ma devono comunque mantenere ordine, scadenze e tracciabilità delle attività.</p></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary>
+              <div class="visual"><div class="kpi-board"><div class="box"><div class="metric"></div><div class="trend" style="width:82%"></div></div><div class="box"><div class="metric"></div><div class="trend"></div></div><div class="box"><div class="metric"></div><div class="trend"></div></div><div class="box"><div class="metric"></div><div class="trend"></div></div></div></div>
+              <div class="service-copy">
+                <h3 data-i18n="s6_title">Affiancamento intelligente e verificato</h3>
+                <p data-i18n="s6_sub">Uso di strumenti di intelligenza artificiale come supporto tecnico-operativo, mai sostitutivi del controllo umano e della responsabilità finale.</p>
+              </div>
+              <div class="plus">+</div>
+            </summary>
+            <div class="service-body">
+              <div class="service-body-grid">
+                <div>
+                  <ul>
+                    <li data-i18n="s6_li1">Utilizzo dell’IA come strumento di supporto.</li>
+                    <li data-i18n="s6_li2">Verifica e controllo umano sempre presenti.</li>
+                    <li data-i18n="s6_li3">Responsabilità finale sul lavoro consegnato.</li>
+                    <li data-i18n="s6_li4">Riduzione dei tempi senza sacrificare l’affidabilità.</li>
+                  </ul>
+                </div>
+                <div class="service-copy"><p data-i18n="s6_desc">Il punto qui è chiarissimo: l’intelligenza artificiale può aiutare, ma non sostituisce il giudizio, la revisione finale e la responsabilità professionale sulla qualità del risultato.</p></div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="profilo">
+      <div class="container">
+        <div class="split-grid">
+          <article class="split-card soft">
+            <p class="kicker" data-i18n="profile_kicker">Profilo</p>
+            <h3 data-i18n="profile_title">Un profilo che unisce diritto, economia e operatività</h3>
+            <p data-i18n="profile_intro">Una formazione elevata ha valore solo quando si traduce in metodo, precisione esecutiva e affidabilità concreta nei processi di lavoro.</p>
+            <div class="bullet-list">
+              <div class="bullet"><i>✓</i><span data-i18n="profile_b1">Ph.D. con formazione interdisciplinare in ambito economico, aziendale e giuridico.</span></div>
+              <div class="bullet"><i>✓</i><span data-i18n="profile_b2">Esperienza in attività di segreteria, supporto progettuale, contabilità e pratiche amministrative.</span></div>
+              <div class="bullet"><i>✓</i><span data-i18n="profile_b3">Competenze nell’uso di Excel a livello professionale, gestionali contabili e servizi digitali per imprese e studi.</span></div>
+              <div class="bullet"><i>✓</i><span data-i18n="profile_b4">Metodo di lavoro fondato su riservatezza, ordine, controllo finale e piena tracciabilità dell’attività svolta.</span></div>
+            </div>
+          </article>
+
+          <article class="split-card">
+            <p class="kicker" data-i18n="principles_kicker">Principi operativi</p>
+            <h3 data-i18n="principles_title">Supporto flessibile, rigoroso e conforme</h3>
+            <p data-i18n="principles_intro">L’operatività resta quasi interamente da remoto, con interventi in presenza solo quando realmente necessari e con piena attenzione ai limiti di legge delle attività riservate.</p>
+            <div class="bullet-list">
+              <div class="bullet"><i>01</i><span data-i18n="principles_b1">Supporto quasi interamente da remoto, rapido e scalabile.</span></div>
+              <div class="bullet"><i>02</i><span data-i18n="principles_b2">Interventi in loco soltanto nei casi davvero necessari.</span></div>
+              <div class="bullet"><i>03</i><span data-i18n="principles_b3">Osservanza dei limiti di legge nelle attività che restano riservate a professionisti abilitati.</span></div>
+              <div class="bullet"><i>04</i><span data-i18n="principles_b4">Possibilità di ampliare l’operatività mediante collaboratori selezionati e coordinati.</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo" class="method">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker" data-i18n="method_kicker">Metodo</p>
+            <h2 data-i18n="method_title">Immagine, metodo, visione</h2>
+          </div>
+          <div>
+            <p data-i18n="method_intro">Un’identità professionale che richiama cultura giuridica, solidità tecnica, organizzazione amministrativa e strumenti di lavoro contemporanei.</p>
+          </div>
+        </div>
+
+        <div class="carousel-shell">
+          <div class="carousel" aria-label="Carosello identità professionale">
+            <article class="slide">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Iustitia_van_Heemskerck.png" alt="Allegoria di Iustitia con benda, bilancia e spada">
+              <div class="slide-overlay">
+                <small data-i18n="slide1_small">Metodo giuridico</small>
+                <strong data-i18n="slide1_title">Rigore, disciplina e osservanza zelante del diritto</strong>
+                <p data-i18n="slide1_desc">Imparzialità, metodo, precisione e costante attenzione ai precetti giuridici che orientano l’attività professionale.</p>
+              </div>
+            </article>
+
+            <article class="slide">
+              <div class="m365-visual-slide" aria-hidden="true">
+                <div style="width:min(82%,360px);display:grid;grid-template-columns:repeat(3,1fr);gap:12px;transform:rotate(-7deg)">
+                  <div style="aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,rgba(24,119,242,.9),rgba(71,145,255,.72));border:1px solid rgba(255,255,255,.16)"></div>
+                  <div style="aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,rgba(16,185,129,.9),rgba(93,214,177,.72));border:1px solid rgba(255,255,255,.16)"></div>
+                  <div style="aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,rgba(245,158,11,.92),rgba(255,201,84,.72));border:1px solid rgba(255,255,255,.16)"></div>
+                  <div style="aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,rgba(124,58,237,.9),rgba(168,85,247,.72));border:1px solid rgba(255,255,255,.16)"></div>
+                  <div style="aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,rgba(239,68,68,.9),rgba(251,113,133,.72));border:1px solid rgba(255,255,255,.16)"></div>
+                  <div style="aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,rgba(15,23,42,.88),rgba(59,130,246,.42));border:1px solid rgba(255,255,255,.16)"></div>
+                </div>
+              </div>
+              <div class="slide-overlay">
+                <small data-i18n="slide2_small">Produttività digitale</small>
+                <strong data-i18n="slide2_title">Excel, Word e organizzazione evoluta</strong>
+                <p data-i18n="slide2_desc">Strumenti di lavoro moderni per tabelle, report, modelli, testi, archivi e processi amministrativi ordinati.</p>
+              </div>
+            </article>
+
+            <article class="slide">
+              <div class="remote-visual" aria-hidden="true">
+                <div class="devices">
+                  <div class="screen main">
+                    <div class="bar"></div>
+                    <div class="row"><div><div class="mini"></div><div class="tiny"></div><div class="tiny" style="width:82%"></div></div><div><div class="mini"></div><div class="tiny"></div><div class="tiny" style="width:70%"></div></div></div>
+                    <div class="mini"></div>
+                  </div>
+                  <div class="screen secondary"><div class="bar"></div><div class="mini"></div><div class="tiny"></div></div>
+                </div>
+              </div>
+              <div class="slide-overlay">
+                <small data-i18n="slide3_small">Operatività</small>
+                <strong data-i18n="slide3_title">Supporto da remoto, presenza quando serve</strong>
+                <p data-i18n="slide3_desc">Connessione rapida, scambio documentale, coordinamento operativo e intervento diretto solo in presenza di effettiva necessità.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker" data-i18n="audience_kicker">Destinatari</p>
+            <h2 data-i18n="audience_title">A chi può essere utile questo servizio</h2>
+          </div>
+          <div>
+            <p data-i18n="audience_intro">Una collaborazione flessibile, adatta sia a esigenze continuative sia a necessità temporanee, picchi di lavoro o riorganizzazioni interne.</p>
+          </div>
+        </div>
+
+        <div class="audience-grid">
+          <div class="audience"><strong data-i18n="a1_title">Imprese e attività locali</strong><span data-i18n="a1_desc">Per alleggerire i carichi amministrativi e migliorare la gestione documentale quotidiana.</span></div>
+          <div class="audience"><strong data-i18n="a2_title">Studi professionali</strong><span data-i18n="a2_desc">Per supporto esterno serio, riservato e conforme ai limiti legali delle attività non riservate.</span></div>
+          <div class="audience"><strong data-i18n="a3_title">Associazioni e fondazioni</strong><span data-i18n="a3_desc">Per segreteria, modulistica, organizzazione dati, pratiche e necessità amministrative ricorrenti.</span></div>
+          <div class="audience"><strong data-i18n="a4_title">Professionisti e organizzazioni</strong><span data-i18n="a4_desc">Per assistenza puntuale, continuativa o su progetto, con metodo e alto standard di affidabilità.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-grid">
+            <div>
+              <p class="kicker" style="color:rgba(255,255,255,.5)" data-i18n="contact_kicker">Contatti</p>
+              <h2 data-i18n="contact_title">Parliamo delle tue necessità operative.</h2>
+              <p data-i18n="contact_intro">Valuto collaborazioni con aziende, studi, associazioni e realtà che cercano un supporto amministrativo serio, ordinato, flessibile e professionale. Il primo contatto serve a capire il carico di lavoro, la natura delle attività e la modalità più efficiente per intervenire.</p>
+            </div>
+            <aside class="contact-card">
+              <div class="contact-item"><div class="contact-block"><div class="contact-label" data-i18n="contact_phone_label">Telefono</div><div class="contact-value">(+39) 320 263 9455</div></div></div>
+              <div class="contact-item"><div class="contact-block"><div class="contact-label" data-i18n="contact_email_label">Email</div><div class="contact-value">enr.maraventano@gmail.com</div></div></div>
+              <div class="contact-item"><div class="contact-block"><div class="contact-label" data-i18n="contact_mode_label">Modalità prevalente</div><div class="contact-value" data-i18n="contact_mode_value">Supporto da remoto con strumenti dedicati</div></div></div>
+              <a class="btn btn-primary" href="mailto:enr.maraventano@gmail.com" data-i18n="contact_btn">Scrivi una email</a>
+            </aside>
+          </div>
+        </div>
+
+        <div class="profile-banner">
+          <div class="profile-banner-copy">
+            <small data-i18n="banner_small">Profilo professionale</small>
+            <h3>
+              <span class="banner-line-1" data-i18n="banner_line_1">Servizi di supporto ed assistenza amministrativa</span>
+              <span class="banner-line-2" data-i18n="banner_line_2">Enrico Maraventano</span>
+              <span class="banner-line-3" data-i18n="banner_line_3">Dottore di ricerca in Scienze economiche, aziendali e giuridiche.</span>
+            </h3>
+            <p data-i18n="banner_quote">Tu pensa al tuo business, io mi occupo della parte amministrativa.</p>
+          </div>
+          <div class="profile-banner-photo">
+            <img src="https://raw.githubusercontent.com/EnricoMaraventano/Servizi-amministrativi/main/Foto_2-removebg-preview.png" alt="Enrico Maraventano in giacca e cravatta nel banner professionale">
+          </div>
+        </div>
+
+        <div class="faq-wrap">
+          <div class="section-head" style="margin-bottom:22px;grid-template-columns:1fr;gap:0">
+            <div>
+              <p class="kicker" data-i18n="faq_kicker">FAQ</p>
+              <h2 style="font-size:clamp(32px,3.6vw,48px)" data-i18n="faq_title">Domande frequenti</h2>
+              <p data-i18n="faq_intro">Una sezione utile per sciogliere i dubbi principali prima del contatto diretto.</p>
+            </div>
+          </div>
+
+          <div class="faq-grid">
+            <details class="faq-item" open><summary><span data-i18n="faq_q1">L’assistenza viene svolta solo da remoto?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" data-i18n="faq_a1">La modalità prevalente è da remoto, con strumenti dedicati per scambio documentale, coordinamento operativo e supporto continuativo. La presenza fisica può essere valutata solo quando realmente necessaria.</div></details>
+            <details class="faq-item"><summary><span data-i18n="faq_q2">Quali clienti possono beneficiare del servizio?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" data-i18n="faq_a2">Il servizio è pensato per imprese, studi professionali, associazioni, ASD, fondazioni, professionisti e organizzazioni che necessitano di supporto amministrativo, documentale e organizzativo.</div></details>
+            <details class="faq-item"><summary><span data-i18n="faq_q3">Ti occupi anche di attività riservate ai professionisti abilitati?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" data-i18n="faq_a3">No. Le attività eventualmente riservate per legge ai professionisti abilitati restano escluse dall’offerta diretta. Il supporto viene svolto nel pieno rispetto dei limiti normativi applicabili.</div></details>
+            <details class="faq-item"><summary><span data-i18n="faq_q4">Puoi intervenire su file Excel, Word o archivi già esistenti?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" data-i18n="faq_a4">Sì. Posso lavorare su documenti e file già esistenti, riorganizzarli, migliorarli, standardizzarli o predisporre modelli nuovi più efficienti per l’operatività quotidiana.</div></details>
+            <details class="faq-item"><summary><span data-i18n="faq_q5">Usi strumenti di intelligenza artificiale?</span><span class="faq-toggle">+</span></summary><div class="faq-answer" data-i18n="faq_a5">Sì, come supporto tecnico-operativo e mai come sostituzione del controllo umano, della verifica finale o della responsabilità professionale sul lavoro consegnato.</div></details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="privacy-center" class="legal-page" aria-label="Informativa privacy">
+    <div class="legal-shell">
+      <div class="legal-header">
+        <h2>Privacy e diritti dell’interessato</h2>
+        <a class="legal-close" href="#contatti" aria-label="Chiudi">×</a>
+      </div>
+      <div class="legal-body">
+        <article class="legal-card">
+          <h3>Informativa privacy</h3>
+          <p>Questa sezione riassume il trattamento dei dati personali raccolti attraverso il sito e mediante eventuali richieste inviate dall’utente. I dati comunicati volontariamente saranno utilizzati per rispondere alle richieste ricevute, valutare possibili collaborazioni e gestire gli eventuali adempimenti connessi.</p>
+          <ul class="legal-list">
+            <li>Titolare del trattamento: Enrico Maraventano.</li>
+            <li>Contatto privacy: utilizzare l’indirizzo email professionale indicato nel sito.</li>
+            <li>Dati trattati: dati identificativi e di contatto, contenuto della richiesta, dati tecnici strettamente necessari alla sicurezza e al funzionamento del sito.</li>
+            <li>Finalità: gestione dei contatti, richieste di informazioni, misure precontrattuali, sicurezza, adempimenti legali e statistiche di navigazione previo consenso quando richiesto.</li>
+            <li>Diritti esercitabili: accesso, rettifica, cancellazione, limitazione, opposizione, portabilità, revoca del consenso e reclamo al Garante nei casi previsti.</li>
+          </ul>
+        </article>
+
+        <article class="legal-card">
+          <h3>Richiesta di esercizio diritti GDPR</h3>
+          <p>Puoi utilizzare questo modulo per predisporre una richiesta via email relativa all’esercizio dei diritti previsti dal GDPR e dalla normativa privacy italiana.</p>
+          <form class="rights-form" id="gdprRequestForm">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="gdprName">Nome e cognome</label>
+                <input id="gdprName" name="gdprName" type="text" placeholder="Nome e cognome">
+              </div>
+              <div class="form-field">
+                <label for="gdprEmail">Email</label>
+                <input id="gdprEmail" name="gdprEmail" type="email" placeholder="tuoindirizzo@email.it">
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="gdprRight">Diritto da esercitare</label>
+                <select id="gdprRight" name="gdprRight">
+                  <option value="Accesso ai dati">Accesso ai dati</option>
+                  <option value="Rettifica dei dati">Rettifica dei dati</option>
+                  <option value="Cancellazione dei dati">Cancellazione dei dati</option>
+                  <option value="Limitazione del trattamento">Limitazione del trattamento</option>
+                  <option value="Opposizione al trattamento">Opposizione al trattamento</option>
+                  <option value="Portabilità dei dati">Portabilità dei dati</option>
+                  <option value="Revoca del consenso">Revoca del consenso</option>
+                  <option value="Altro">Altro</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="gdprRelation">Rapporto con il sito</label>
+                <select id="gdprRelation" name="gdprRelation">
+                  <option value="Visitore del sito">Visitore del sito</option>
+                  <option value="Richiedente informazioni">Richiedente informazioni</option>
+                  <option value="Potenziale cliente/collaboratore">Potenziale cliente/collaboratore</option>
+                  <option value="Altro">Altro</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="gdprMessage">Dettaglio della richiesta</label>
+              <textarea id="gdprMessage" name="gdprMessage" placeholder="Descrivi in modo chiaro la tua richiesta, indicando ogni elemento utile per identificarla."></textarea>
+            </div>
+            <p class="small-note">Il pulsante qui sotto apre il tuo client email con un messaggio precompilato da inviare all’indirizzo di contatto indicato sul sito.</p>
+            <div class="rights-actions">
+              <button class="cookie-btn primary" id="sendGdprRequest" type="submit">Prepara email</button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cookie-center" class="legal-page" aria-label="Cookie policy">
+    <div class="legal-shell">
+      <div class="legal-header">
+        <h2>Cookie policy</h2>
+        <a class="legal-close" href="#contatti" aria-label="Chiudi">×</a>
+      </div>
+      <div class="legal-body">
+        <article class="legal-card">
+          <h3>Informazioni sui cookie</h3>
+          <p>Il sito utilizza cookie tecnici necessari al corretto funzionamento e può attivare strumenti analitici solo previo consenso dell’utente. Nessun cookie analitico facoltativo viene caricato prima della scelta espressa tramite il banner.</p>
+          <ul class="legal-list">
+            <li>Cookie tecnici: indispensabili per lingua, preferenze essenziali e continuità della navigazione.</li>
+            <li>Cookie analitici: attivabili solo in caso di consenso, per misurare traffico, pagine visitate e performance del sito.</li>
+            <li>L’utente può modificare in qualsiasi momento le preferenze eliminando i cookie dal browser o tornando al pannello di gestione integrato nel sito.</li>
+            <li>In caso di attivazione di Google Analytics 4, il tracciamento è subordinato al consenso e richiede l’inserimento manuale dell’ID di misurazione.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="cookie-banner" id="cookieBanner" hidden>
+    <div class="cookie-banner-inner">
+      <div>
+        <h4>Cookie e preferenze privacy</h4>
+        <p>Uso cookie tecnici necessari e, solo se lo consenti, strumenti analitici per misurare le visite e migliorare il sito. Puoi accettare, rifiutare o personalizzare le scelte. Consulta anche <a class="cookie-link" href="#privacy-policy">privacy</a> e <a class="cookie-link" href="#cookie-policy">cookie policy</a>.</p>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn ghost" id="openCookiePanel" type="button">Gestisci</button>
+        <button class="cookie-btn" id="rejectCookies" type="button">Rifiuta</button>
+        <button class="cookie-btn primary" id="acceptCookies" type="button">Accetta</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cookie-panel" id="cookiePanel" hidden>
+    <h4>Preferenze cookie</h4>
+    <p>Puoi decidere quali categorie abilitare. I cookie tecnici restano sempre attivi perché necessari al funzionamento del sito.</p>
+    <div class="cookie-option">
+      <div>
+        <strong>Cookie tecnici</strong>
+        <span>Necessari per lingua, preferenze essenziali e continuità della navigazione.</span>
+      </div>
+      <label class="switch"><input type="checkbox" checked disabled><span class="switch-slider"></span></label>
+    </div>
+    <div class="cookie-option">
+      <div>
+        <strong>Cookie analitici</strong>
+        <span>Statistiche aggregate e misurazione del traffico tramite integrazione analitica attivata solo previo consenso.</span>
+      </div>
+      <label class="switch"><input type="checkbox" id="analyticsConsent"><span class="switch-slider"></span></label>
+    </div>
+    <div class="cookie-panel-actions">
+      <button class="cookie-btn ghost" id="closeCookiePanel" type="button">Chiudi</button>
+      <button class="cookie-btn primary" id="saveCookieSettings" type="button">Salva preferenze</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand"><strong>Enrico Maraventano, Ph.D.</strong><span data-i18n="footer_sub">Assistenza amministrativa professionale • Operatività da remoto • Supporto documentale e organizzativo</span></div>
+      <div class="footer-note" data-i18n="footer_note">Le attività eventualmente riservate per legge ai professionisti abilitati restano escluse dall’offerta diretta del servizio.</div>
+      <div class="footer-links">
+        <a href="#privacy-center">Privacy</a>
+        <a href="#cookie-center">Cookie</a>
+        <a href="#" id="reopenCookiePanel">Preferenze cookie</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      it: {
+        page_title: 'Enrico Maraventano, Ph.D. | Assistenza amministrativa professionale',
+        meta_description: 'Servizi di assistenza amministrativa professionale da remoto per imprese, studi, associazioni e organizzazioni. Excel, Word, gestionali, pratiche digitali, supporto operativo e documentale.',
+        brand_kicker: 'Assistenza amministrativa',
+        nav_services: 'Servizi',
+        nav_profile: 'Profilo',
+        nav_method: 'Metodo',
+        nav_contacts: 'Contatti',
+        hero_eyebrow: 'Supporto operativo, documentale e organizzativo',
+        hero_title: 'Struttura, precisione e affidabilità per la tua amministrazione.',
+        hero_intro: 'Offro assistenza amministrativa professionale per imprese, studi professionali, associazioni sportive e culturali, realtà locali e organizzazioni che necessitano di un supporto serio, riservato e qualificato, in presenza soltanto quando realmente necessario e per il resto quasi esclusivamente da remoto.',
+        hero_point_1: 'Excel avanzato, Word, documenti strutturati, reportistica, archivi, modulistica e supporto operativo.',
+        hero_point_2: 'Uso di software gestionali, servizi digitali per pratiche amministrative e organizzazione dei flussi documentali.',
+        hero_point_3: 'Collaborazione con imprese, ASD, associazioni, studi e professionisti per attività residuali e di supporto.',
+        hero_point_4: 'Approccio giuridico-economico, metodo rigoroso, attenzione alla legge, alla riservatezza e alla verifica finale.',
+        hero_cta_1: 'Richiedi una consulenza',
+        hero_cta_2: 'Scopri i servizi',
+        panel_small: 'Profilo sintetico',
+        panel_title: 'Un supporto professionale pensato per chi ha bisogno di ordine, metodo e affidabilità.',
+        panel_badge_1: 'Ph.D. / Law & Economics',
+        panel_badge_2: 'Supporto da remoto',
+        panel_badge_3: 'Metodo documentale',
+        strip_1: 'Supporto quasi interamente da remoto, rapido e scalabile',
+        strip_2: 'Precisione documentale, controllo finale e tracciabilità del lavoro',
+        strip_3: 'Collaborazione con imprese, studi, associazioni e organizzazioni',
+        services_kicker: 'Servizi',
+        services_title: 'Servizi offerti',
+        services_intro: 'La versione bilingue è più affidabile di una semplice traduzione automatica del browser: ti consente di controllare tono, terminologia e percezione professionale in entrambe le lingue.',
+        s1_title: 'Supporto amministrativo e documentale',
+        s1_sub: 'Predisposizione documenti, modulistica, gestione archivi, organizzazione pratiche, monitoraggio scadenze e supporto segretariale.',
+        s1_li1: 'Predisposizione documenti e modulistica.',
+        s1_li2: 'Gestione archivi e organizzazione delle pratiche.',
+        s1_li3: 'Monitoraggio scadenze e supporto segretariale.',
+        s1_li4: 'Tenuta più ordinata dei flussi amministrativi.',
+        s1_desc: 'È il blocco più trasversale: serve a dare ordine al lavoro quotidiano, ridurre dispersioni e rendere i materiali più chiari, reperibili e gestibili nel tempo.',
+        s2_title: 'Excel, Word e automazione operativa',
+        s2_sub: 'Creazione e gestione di file strutturati, formule, tabelle, report, database leggeri e modelli ricorrenti.',
+        s2_li1: 'File Excel organizzati e orientati alla produttività.',
+        s2_li2: 'Documenti Word professionali e standardizzati.',
+        s2_li3: 'Formule, tabelle e modelli ricorrenti.',
+        s2_li4: 'Automazioni per attività ripetitive.',
+        s2_desc: 'Questa parte è pensata per chi ha già molti file ma non strumenti davvero efficienti: l’obiettivo è far lavorare meglio documenti e fogli.',
+        s3_title: 'Gestionali e piattaforme digitali',
+        s3_sub: 'Utilizzo professionale di software gestionali e piattaforme per adempimenti, pratiche e supporto ai processi interni.',
+        s3_li1: 'Uso di software gestionali in chiave operativa.',
+        s3_li2: 'Supporto alle pratiche e agli adempimenti digitali.',
+        s3_li3: 'Coordinamento dei processi organizzativi interni.',
+        s3_li4: 'Maggior continuità tra strumenti e attività quotidiane.',
+        s3_desc: 'Qui il valore non sta soltanto nel saper “entrare in piattaforma”, ma nel rendere più lineare il lavoro attorno a procedure, pratiche e flussi amministrativi digitali.',
+        s4_title: 'Supporto a studi professionali',
+        s4_sub: 'Collaborazione esterna per attività preparatorie, residuali e di supporto in ambito amministrativo, contabile e organizzativo.',
+        s4_li1: 'Affiancamento su attività non riservate.',
+        s4_li2: 'Supporto organizzativo e documentale continuo.',
+        s4_li3: 'Rispetto del segreto professionale e dei limiti di legge.',
+        s4_li4: 'Presidio dei lavori preparatori o residuali.',
+        s4_desc: 'La logica è alleggerire i professionisti sulle attività di supporto, mantenendo rigore, riservatezza e piena attenzione alle attività che restano riservate per legge agli abilitati negli specifici albi di appartenenza.',
+        s5_title: 'Assistenza per associazioni, ASD e realtà locali',
+        s5_sub: 'Supporto concreto per segreteria, organizzazione interna, documentazione, gestione dati, prospetti e comunicazioni.',
+        s5_li1: 'Segreteria e gestione ordinata della documentazione.',
+        s5_li2: 'Organizzazione dati, prospetti e comunicazioni.',
+        s5_li3: 'Supporto per esigenze continuative o temporanee.',
+        s5_li4: 'Aiuto concreto per realtà con struttura amministrativa leggera.',
+        s5_desc: 'È un supporto molto utile per realtà che non hanno un ufficio amministrativo interno forte ma devono comunque mantenere ordine, scadenze e tracciabilità delle attività.',
+        s6_title: 'Affiancamento intelligente e verificato',
+        s6_sub: 'Uso di strumenti di intelligenza artificiale come supporto tecnico-operativo, mai sostitutivi del controllo umano e della responsabilità finale.',
+        s6_li1: 'Utilizzo dell’IA come strumento di supporto.',
+        s6_li2: 'Verifica e controllo umano sempre presenti.',
+        s6_li3: 'Responsabilità finale sul lavoro consegnato.',
+        s6_li4: 'Riduzione dei tempi senza sacrificare l’affidabilità.',
+        s6_desc: 'Il punto qui è chiarissimo: l’intelligenza artificiale può aiutare, ma non sostituisce il giudizio, la revisione finale e la responsabilità professionale sulla qualità del risultato.',
+        profile_kicker: 'Profilo',
+        profile_title: 'Un profilo che unisce diritto, economia e operatività',
+        profile_intro: 'Una formazione elevata ha valore solo quando si traduce in metodo, precisione esecutiva e affidabilità concreta nei processi di lavoro.',
+        profile_b1: 'Ph.D. con formazione interdisciplinare in ambito economico, aziendale e giuridico.',
+        profile_b2: 'Esperienza in attività di segreteria, supporto progettuale, contabilità e pratiche amministrative.',
+        profile_b3: 'Competenze nell’uso di Excel a livello professionale, gestionali contabili e servizi digitali per imprese e studi.',
+        profile_b4: 'Metodo di lavoro fondato su riservatezza, ordine, controllo finale e piena tracciabilità dell’attività svolta.',
+        principles_kicker: 'Principi operativi',
+        principles_title: 'Supporto flessibile, rigoroso e conforme',
+        principles_intro: 'L’operatività resta quasi interamente da remoto, con interventi in presenza solo quando realmente necessari e con piena attenzione ai limiti di legge delle attività riservate.',
+        principles_b1: 'Supporto quasi interamente da remoto, rapido e scalabile.',
+        principles_b2: 'Interventi in loco soltanto nei casi davvero necessari.',
+        principles_b3: 'Osservanza dei limiti di legge nelle attività che restano riservate a professionisti abilitati.',
+        principles_b4: 'Possibilità di ampliare l’operatività mediante collaboratori selezionati e coordinati.',
+        method_kicker: 'Metodo',
+        method_title: 'Immagine, metodo, visione',
+        method_intro: 'Un’identità professionale che richiama cultura giuridica, solidità tecnica, organizzazione amministrativa e strumenti di lavoro contemporanei.',
+        slide1_small: 'Metodo giuridico',
+        slide1_title: 'Rigore, disciplina e osservanza zelante del diritto',
+        slide1_desc: 'Imparzialità, metodo, precisione e costante attenzione ai precetti giuridici che orientano l’attività professionale.',
+        slide2_small: 'Produttività digitale',
+        slide2_title: 'Excel, Word e organizzazione evoluta',
+        slide2_desc: 'Strumenti di lavoro moderni per tabelle, report, modelli, testi, archivi e processi amministrativi ordinati.',
+        slide3_small: 'Operatività',
+        slide3_title: 'Supporto da remoto, presenza quando serve',
+        slide3_desc: 'Connessione rapida, scambio documentale, coordinamento operativo e intervento diretto solo in presenza di effettiva necessità.',
+        audience_kicker: 'Destinatari',
+        audience_title: 'A chi può essere utile questo servizio',
+        audience_intro: 'Una collaborazione flessibile, adatta sia a esigenze continuative sia a necessità temporanee, picchi di lavoro o riorganizzazioni interne.',
+        a1_title: 'Imprese e attività locali',
+        a1_desc: 'Per alleggerire i carichi amministrativi e migliorare la gestione documentale quotidiana.',
+        a2_title: 'Studi professionali',
+        a2_desc: 'Per supporto esterno serio, riservato e conforme ai limiti legali delle attività non riservate.',
+        a3_title: 'Associazioni e fondazioni',
+        a3_desc: 'Per segreteria, modulistica, organizzazione dati, pratiche e necessità amministrative ricorrenti.',
+        a4_title: 'Professionisti e organizzazioni',
+        a4_desc: 'Per assistenza puntuale, continuativa o su progetto, con metodo e alto standard di affidabilità.',
+        contact_kicker: 'Contatti',
+        contact_title: 'Parliamo delle tue necessità operative.',
+        contact_intro: 'Valuto collaborazioni con aziende, studi, associazioni e realtà che cercano un supporto amministrativo serio, ordinato, flessibile e professionale. Il primo contatto serve a capire il carico di lavoro, la natura delle attività e la modalità più efficiente per intervenire.',
+        contact_phone_label: 'Telefono',
+        contact_email_label: 'Email',
+        contact_mode_label: 'Modalità prevalente',
+        contact_mode_value: 'Supporto da remoto con strumenti dedicati',
+        contact_btn: 'Scrivi una email',
+        banner_small: 'Profilo professionale',
+        banner_line_1: 'Servizi di supporto ed assistenza amministrativa',
+        banner_line_2: 'Enrico Maraventano',
+        banner_line_3: 'Dottore di ricerca in Scienze economiche, aziendali e giuridiche.',
+        banner_quote: 'Tu pensa al tuo business, io mi occupo della parte amministrativa.',
+        faq_kicker: 'FAQ',
+        faq_title: 'Domande frequenti',
+        faq_intro: 'Una sezione utile per sciogliere i dubbi principali prima del contatto diretto.',
+        faq_q1: 'L’assistenza viene svolta solo da remoto?',
+        faq_a1: 'La modalità prevalente è da remoto, con strumenti dedicati per scambio documentale, coordinamento operativo e supporto continuativo. La presenza fisica può essere valutata solo quando realmente necessaria.',
+        faq_q2: 'Quali clienti possono beneficiare del servizio?',
+        faq_a2: 'Il servizio è pensato per imprese, studi professionali, associazioni, ASD, fondazioni, professionisti e organizzazioni che necessitano di supporto amministrativo, documentale e organizzativo.',
+        faq_q3: 'Ti occupi anche di attività riservate ai professionisti abilitati?',
+        faq_a3: 'No. Le attività eventualmente riservate per legge ai professionisti abilitati restano escluse dall’offerta diretta. Il supporto viene svolto nel pieno rispetto dei limiti normativi applicabili.',
+        faq_q4: 'Puoi intervenire su file Excel, Word o archivi già esistenti?',
+        faq_a4: 'Sì. Posso lavorare su documenti e file già esistenti, riorganizzarli, migliorarli, standardizzarli o predisporre modelli nuovi più efficienti per l’operatività quotidiana.',
+        faq_q5: 'Usi strumenti di intelligenza artificiale?',
+        faq_a5: 'Sì, come supporto tecnico-operativo e mai come sostituzione del controllo umano, della verifica finale o della responsabilità professionale sul lavoro consegnato.',
+        footer_sub: 'Assistenza amministrativa professionale • Operatività da remoto • Supporto documentale e organizzativo',
+        footer_note: 'Le attività eventualmente riservate per legge ai professionisti abilitati restano escluse dall’offerta diretta del servizio.'
+      },
+      en: {
+        page_title: 'Enrico Maraventano, Ph.D. | Professional administrative support services',
+        meta_description: 'Professional remote administrative support services for companies, professional firms, associations and organisations. Excel, Word, management software, digital procedures, operational and documentary support.',
+        brand_kicker: 'Administrative support',
+        nav_services: 'Services',
+        nav_profile: 'Profile',
+        nav_method: 'Method',
+        nav_contacts: 'Contacts',
+        hero_eyebrow: 'Operational, documentary and organisational support',
+        hero_title: 'Structure, accuracy and reliability for your administrative operations.',
+        hero_intro: 'I provide professional administrative support for companies, professional firms, sports and cultural associations, local organisations and entities that need serious, discreet and qualified assistance, with in-person support only when truly necessary and otherwise almost entirely remote.',
+        hero_point_1: 'Advanced Excel, Word, structured documents, reporting, archives, templates and operational support.',
+        hero_point_2: 'Use of management software, digital services for administrative procedures and organisation of document workflows.',
+        hero_point_3: 'Collaboration with companies, sports clubs, associations, firms and professionals for residual and support activities.',
+        hero_point_4: 'A legal-economic approach, rigorous method, attention to regulations, confidentiality and final review.',
+        hero_cta_1: 'Request a consultation',
+        hero_cta_2: 'Explore services',
+        panel_small: 'Professional profile',
+        panel_title: 'Professional support designed for those who need order, method and reliability.',
+        panel_badge_1: 'Ph.D. / Law & Economics',
+        panel_badge_2: 'Remote support',
+        panel_badge_3: 'Document-based method',
+        strip_1: 'Almost entirely remote support, fast and scalable',
+        strip_2: 'Document accuracy, final review and traceability of work',
+        strip_3: 'Collaboration with companies, firms, associations and organisations',
+        services_kicker: 'Services',
+        services_title: 'Services offered',
+        services_intro: 'An internal bilingual version is more reliable than a simple browser translation: it lets you control tone, terminology and professional perception in both languages.',
+        s1_title: 'Administrative and documentary support',
+        s1_sub: 'Preparation of documents and templates, archive management, case organisation, deadline monitoring and secretarial support.',
+        s1_li1: 'Preparation of documents and templates.',
+        s1_li2: 'Archive management and organisation of administrative files.',
+        s1_li3: 'Deadline monitoring and secretarial support.',
+        s1_li4: 'More orderly management of administrative workflows.',
+        s1_desc: 'This is the most transversal service block: it helps bring order to day-to-day work, reduce dispersion and make materials clearer, easier to retrieve and easier to manage over time.',
+        s2_title: 'Excel, Word and workflow automation',
+        s2_sub: 'Creation and management of structured files, formulas, tables, reports, light databases and recurring templates.',
+        s2_li1: 'Excel files organised around productivity.',
+        s2_li2: 'Professional and standardised Word documents.',
+        s2_li3: 'Formulas, tables and recurring templates.',
+        s2_li4: 'Automation for repetitive tasks.',
+        s2_desc: 'This area is intended for those who already have many files but not truly efficient tools: the goal is to make documents and worksheets work better.',
+        s3_title: 'Management software and digital platforms',
+        s3_sub: 'Professional use of management software and platforms for compliance, procedures and internal workflow support.',
+        s3_li1: 'Operational use of management software.',
+        s3_li2: 'Support with digital procedures and compliance tasks.',
+        s3_li3: 'Coordination of internal organisational processes.',
+        s3_li4: 'Greater continuity between tools and daily activities.',
+        s3_desc: 'The value here is not merely knowing how to access a platform, but making work around procedures, filings and digital administrative flows more efficient and more linear.',
+        s4_title: 'Support for professional firms',
+        s4_sub: 'External collaboration for preparatory, residual and support activities in the administrative, accounting and organisational area.',
+        s4_li1: 'Assistance on non-reserved activities.',
+        s4_li2: 'Ongoing organisational and documentary support.',
+        s4_li3: 'Respect for professional confidentiality and legal boundaries.',
+        s4_li4: 'Management of preparatory or residual tasks.',
+        s4_desc: 'The logic is to relieve professionals of support activities while maintaining rigour, confidentiality and full attention to those activities that remain legally reserved to licensed professionals enrolled in their respective registers.',
+        s5_title: 'Support for associations, sports clubs and local organisations',
+        s5_sub: 'Practical support for secretarial work, internal organisation, documentation, data handling, schedules and communications.',
+        s5_li1: 'Secretarial work and orderly document management.',
+        s5_li2: 'Organisation of data, schedules and communications.',
+        s5_li3: 'Support for continuous or temporary needs.',
+        s5_li4: 'Practical help for entities with a light administrative structure.',
+        s5_desc: 'This is particularly useful for organisations that do not have a strong in-house administrative office but still need order, deadlines and traceability of activities.',
+        s6_title: 'Smart, human-verified support',
+        s6_sub: 'Use of artificial intelligence tools as technical-operational support, never as a substitute for human control and final responsibility.',
+        s6_li1: 'Use of AI as a support tool.',
+        s6_li2: 'Human review and verification are always present.',
+        s6_li3: 'Final responsibility for the delivered work.',
+        s6_li4: 'Time savings without sacrificing reliability.',
+        s6_desc: 'The point is very clear: artificial intelligence can help, but it does not replace judgment, final review or professional responsibility for the quality of the outcome.',
+        profile_kicker: 'Profile',
+        profile_title: 'A profile combining law, economics and operational execution',
+        profile_intro: 'High-level training only has value when it translates into method, precision of execution and concrete reliability within working processes.',
+        profile_b1: 'Ph.D. with interdisciplinary training in economics, business and legal studies.',
+        profile_b2: 'Experience in secretarial work, project support, accounting and administrative procedures.',
+        profile_b3: 'Professional-level Excel skills, accounting management software and digital services for companies and firms.',
+        profile_b4: 'A working method based on confidentiality, order, final review and full traceability of the activities performed.',
+        principles_kicker: 'Operating principles',
+        principles_title: 'Flexible, rigorous and compliant support',
+        principles_intro: 'Operations remain almost entirely remote, with in-person intervention only when genuinely necessary and with full attention to the legal boundaries of reserved activities.',
+        principles_b1: 'Almost entirely remote support, fast and scalable.',
+        principles_b2: 'On-site interventions only when truly necessary.',
+        principles_b3: 'Compliance with legal limits on activities reserved to licensed professionals.',
+        principles_b4: 'Possibility to expand operational capacity through selected collaborators coordinated by me.',
+        method_kicker: 'Method',
+        method_title: 'Image, method and vision',
+        method_intro: 'A professional identity that combines legal culture, technical solidity, administrative organisation and contemporary work tools.',
+        slide1_small: 'Legal method',
+        slide1_title: 'Rigour, discipline and diligent observance of the law',
+        slide1_desc: 'Impartiality, method, precision and constant attention to the legal principles that guide professional activity.',
+        slide2_small: 'Digital productivity',
+        slide2_title: 'Excel, Word and advanced organisation',
+        slide2_desc: 'Modern work tools for tables, reports, templates, texts, archives and orderly administrative processes.',
+        slide3_small: 'Operations',
+        slide3_title: 'Remote support, in-person presence when necessary',
+        slide3_desc: 'Fast connection, document exchange, operational coordination and direct intervention only when genuinely required.',
+        audience_kicker: 'Target clients',
+        audience_title: 'Who this service can be useful for',
+        audience_intro: 'A flexible collaboration model suitable both for ongoing needs and for temporary requirements, workload peaks or internal reorganisations.',
+        a1_title: 'Companies and local businesses',
+        a1_desc: 'To lighten administrative workload and improve daily document management.',
+        a2_title: 'Professional firms',
+        a2_desc: 'For serious, discreet external support consistent with the legal limits on non-reserved activities.',
+        a3_title: 'Associations and foundations',
+        a3_desc: 'For secretarial support, templates, data organisation, administrative procedures and recurring administrative needs.',
+        a4_title: 'Professionals and organisations',
+        a4_desc: 'For targeted, ongoing or project-based support delivered with method and a high standard of reliability.',
+        contact_kicker: 'Contacts',
+        contact_title: 'Let’s discuss your operational needs.',
+        contact_intro: 'I consider collaborations with companies, professional firms, associations and organisations looking for serious, orderly, flexible and professional administrative support. The first contact is meant to understand workload, the nature of the tasks and the most efficient support model.',
+        contact_phone_label: 'Phone',
+        contact_email_label: 'Email',
+        contact_mode_label: 'Main working mode',
+        contact_mode_value: 'Remote support with dedicated tools',
+        contact_btn: 'Send an email',
+        banner_small: 'Professional profile',
+        banner_line_1: 'Administrative support and assistance services',
+        banner_line_2: 'Enrico Maraventano',
+        banner_line_3: 'Ph.D. in Economic, Business and Legal Sciences.',
+        banner_quote: 'You focus on your business, I take care of the administrative side.',
+        faq_kicker: 'FAQ',
+        faq_title: 'Frequently asked questions',
+        faq_intro: 'A section designed to clarify the main points before direct contact.',
+        faq_q1: 'Is the service provided only remotely?',
+        faq_a1: 'The prevailing mode is remote, with dedicated tools for document exchange, operational coordination and continuous support. Physical presence can be considered only when genuinely necessary.',
+        faq_q2: 'Which clients can benefit from the service?',
+        faq_a2: 'The service is designed for companies, professional firms, associations, sports clubs, foundations, professionals and organisations that need administrative, documentary and organisational support.',
+        faq_q3: 'Do you also handle activities reserved to licensed professionals?',
+        faq_a3: 'No. Any activities legally reserved to licensed professionals are excluded from the direct service offer. Support is provided in full compliance with the applicable legal boundaries.',
+        faq_q4: 'Can you work on existing Excel files, Word documents or archives?',
+        faq_a4: 'Yes. I can work on existing files and documents, reorganise them, improve them, standardise them or create new and more efficient models for daily operations.',
+        faq_q5: 'Do you use artificial intelligence tools?',
+        faq_a5: 'Yes, as technical-operational support and never as a substitute for human control, final review or professional responsibility for the delivered work.',
+        footer_sub: 'Professional administrative support • Remote operations • Documentary and organisational support',
+        footer_note: 'Any activities legally reserved to licensed professionals remain excluded from the direct service offer.'
+      }
+    };
+
+    function applyLanguage(lang){
+      const dict = translations[lang] || translations.it;
+      document.documentElement.lang = lang;
+      document.title = dict.page_title;
+      const meta = document.querySelector('meta[name="description"]');
+      if(meta) meta.setAttribute('content', dict.meta_description);
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if(dict[key] !== undefined) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site-lang', lang);
+    }
+
+    const storedLang = localStorage.getItem('site-lang') || 'it';
+    applyLanguage(storedLang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    });
+
+    const CONSENT_KEY = 'site-consent-v1';
+    const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+    let analyticsLoaded = false;
+
+    function loadAnalytics(){
+      if (analyticsLoaded || !GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') return;
+      analyticsLoaded = true;
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+      document.head.appendChild(script);
+      gtag('consent', 'default', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID, {
+        anonymize_ip: true,
+        page_title: document.title,
+        page_location: window.location.href
+      });
+    }
+
+    function readConsent(){
+      try { return JSON.parse(localStorage.getItem(CONSENT_KEY) || 'null'); }
+      catch(e){ return null; }
+    }
+
+    function applyConsent(consent){
+      const banner = document.getElementById('cookieBanner');
+      const panel = document.getElementById('cookiePanel');
+      const analyticsToggle = document.getElementById('analyticsConsent');
+      if (banner) banner.hidden = true;
+      if (panel) panel.hidden = true;
+      if (analyticsToggle) analyticsToggle.checked = !!consent.analytics;
+      if (consent.analytics) loadAnalytics();
+    }
+
+    function saveConsent(consent){
+      localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+      applyConsent(consent);
+    }
+
+    const savedConsent = readConsent();
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookiePanel = document.getElementById('cookiePanel');
+    const analyticsToggle = document.getElementById('analyticsConsent');
+
+    if (savedConsent) {
+      applyConsent(savedConsent);
+    } else if (cookieBanner) {
+      cookieBanner.hidden = false;
+    }
+
+    document.getElementById('acceptCookies')?.addEventListener('click', () => saveConsent({ analytics: true }));
+    document.getElementById('rejectCookies')?.addEventListener('click', () => saveConsent({ analytics: false }));
+    document.getElementById('openCookiePanel')?.addEventListener('click', () => { if (cookiePanel) cookiePanel.hidden = false; });
+    document.getElementById('closeCookiePanel')?.addEventListener('click', () => { if (cookiePanel) cookiePanel.hidden = true; });
+    document.getElementById('saveCookieSettings')?.addEventListener('click', () => {
+      saveConsent({ analytics: !!analyticsToggle?.checked });
+    });
+
+    document.getElementById('gdprRequestForm')?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = document.getElementById('gdprName')?.value?.trim() || '';
+      const email = document.getElementById('gdprEmail')?.value?.trim() || '';
+      const right = document.getElementById('gdprRight')?.value || 'Richiesta privacy';
+      const relation = document.getElementById('gdprRelation')?.value || '';
+      const message = document.getElementById('gdprMessage')?.value?.trim() || '';
+      const subject = encodeURIComponent(`Richiesta privacy - ${right}`);
+      const body = encodeURIComponent(
+`Nome e cognome: ${name}
+Email: ${email}
+Diritto esercitato: ${right}
+Rapporto con il sito: ${relation}
+
+Dettaglio richiesta:
+${message}
+`
+      );
+      window.location.href = `mailto:enr.maraventano@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    document.getElementById('reopenCookiePanel')?.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (cookieBanner) cookieBanner.hidden = false;
+      if (cookiePanel) cookiePanel.hidden = false;
+    });
+  </script>
+</body>
+</html>
